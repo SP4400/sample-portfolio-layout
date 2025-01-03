@@ -3,7 +3,7 @@ name: Copy Files to AWS S3
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy-to-s3:
@@ -25,4 +25,4 @@ jobs:
       # Step 3: Sync files to S3 bucket
       - name: Copy Files to S3
         run: |
-          aws s3 sync . s3://your-s3-bucket-name --delete
+          aws s3 sync . s3://portfolio-bucket-sp  --delete
